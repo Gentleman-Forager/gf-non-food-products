@@ -48,14 +48,13 @@
       margin: 0 0 18px;
     }
 
-    .category-image {
-      cursor: pointer;
-      display: block;
-      transition: transform 0.16s ease, box-shadow 0.16s ease;
-      border-radius: 18px;
-      max-width: 1000px;   /* optional safety cap, wider than your grid */
-      margin: 0 auto;
-    }
+    .category-image img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 720px;   /* <<< make the image big */
+}
 
     .category-image img {
       width: 100%;         /* take the full width of .category-image */
