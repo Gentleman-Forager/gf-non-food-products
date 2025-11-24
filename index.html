@@ -2,142 +2,283 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Non-Food Products | Gentleman Forager</title>
+  <title>Gentleman Forager · Non-Food Shop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Montserrat font (matches your brand) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <style>
+    :root {
+      --gf-bg: #f7f1e6;         /* light warm beige */
+      --gf-text: #1f2723;       /* deep forest text */
+      --gf-accent: #c86b1b;     /* warm accent (icons, etc.) */
+      --gf-card-bg: #ffffff;
+      --gf-card-border: rgba(14, 53, 34, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: system-ui, sans-serif;
-      background-color: #f9f4ed;
-      color: #222;
+      padding: 40px 16px 80px;
+      font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--gf-bg);
+      color: var(--gf-text);
     }
-    header {
-      background-color: #002c1b;
-      padding: 3rem 1rem;
-      text-align: center;
-      color: #fff;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    header p {
-      margin-top: 0.5rem;
-      font-size: 1rem;
-      color: #b5d1c3;
-    }
-    section {
-      padding: 2rem 1rem;
-      max-width: 960px;
+
+    .page-wrapper {
+      max-width: 1100px;
       margin: 0 auto;
     }
-    h2 {
+
+    .page-title {
       text-align: center;
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 40px;
     }
-    .category {
-      margin-bottom: 3rem;
+
+    .section-block {
+      margin-bottom: 64px;
+      text-align: center;
     }
-    .icon-title {
-      display: flex;
+
+    .section-eyebrow {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-weight: 700;
+      margin-bottom: 4px;
+      opacity: 0.85;
+      display: inline-flex;
       align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      font-weight: bold;
-      font-size: 1.25rem;
-      margin-bottom: 1rem;
+      gap: 8px;
     }
-    .products {
+
+    .section-eyebrow span.icon {
+      font-size: 18px;
+    }
+
+    .section-title {
+      font-size: 22px;
+      font-weight: 800;
+      margin: 0 0 28px;
+    }
+
+    .category-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 1rem;
+      gap: 24px;
     }
-    .product {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.05);
-      padding: 1rem;
-      width: 180px;
-      text-align: center;
-      transition: transform 0.2s ease;
-    }
-    .product:hover {
-      transform: translateY(-5px);
-    }
-    .product img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 6px;
-    }
-    .product a {
-      text-decoration: none;
-      color: #222;
-      font-weight: 600;
+
+    .product-card {
       display: block;
-      margin-top: 0.5rem;
+      width: 230px;
+      padding: 18px 20px 20px;
+      background: var(--gf-card-bg);
+      border-radius: 18px;
+      border: 1px solid var(--gf-card-border);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+      text-decoration: none;
+      color: var(--gf-text);
+      transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(14, 53, 34, 0.22);
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .product-media {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 10px;
+      border-radius: 999px;
+      background: #f3f3f3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .product-media img {
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+    }
+
+    .product-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-weight: 600;
+      opacity: 0.7;
+      margin-bottom: 4px;
+    }
+
+    .product-name {
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      body {
+        padding: 32px 16px 56px;
+      }
+
+      .page-title {
+        font-size: 24px;
+      }
+
+      .category-grid {
+        gap: 18px;
+      }
+
+      .product-card {
+        width: 100%;
+        max-width: 320px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <h1>Non-Food Products</h1>
-    <p>Explore apparel, accessories, mugs, gifts, and more!</p>
-  </header>
+  <main class="page-wrapper">
+    <h1 class="page-title">Non-Food Shop</h1>
 
-  <section class="category">
-    <div class="icon-title">👕 Apparel Collection</div>
-    <div class="products">
-      <div class="product">
-        <img src="https://cdn.shopify.com/s/files/1/0680/4150/7113/files/shroom-tshirt.png?v=1699488844" alt="Shroom T-Shirt">
-        <a href="/product-page/shroom-tshirt">Shroom T-Shirt</a>
+    <!-- Apparel Collection -->
+    <section class="section-block" id="apparel">
+      <div class="section-eyebrow">
+        <span class="icon">👕</span>
+        <span>Apparel Collection</span>
       </div>
-      <div class="product">
-        <img src="https://cdn.shopify.com/s/files/1/0680/4150/7113/files/shroom-leggings.png?v=1699488851" alt="Shroom Leggings">
-        <a href="/product-page/shroom-leggings">Shroom Leggings</a>
-      </div>
-      <div class="product">
-        <img src="https://cdn.shopify.com/s/files/1/0680/4150/7113/files/forager-slides.png?v=1699488859" alt="Forager Slides">
-        <a href="/product-page/forager-slides">Forager Slides</a>
-      </div>
-    </div>
-  </section>
+      <h2 class="section-title">Wear Your Wild Side</h2>
 
-  <section class="category">
-    <div class="icon-title">🧢 Gear & Accessories</div>
-    <div class="products">
-      <div class="product">
-        <img src="https://cdn.shopify.com/s/files/1/0680/4150/7113/files/tote-bag.png?v=1699488866" alt="Mushroom Tote Bag">
-        <a href="/product-page/mushroom-tote-bag">Mushroom Tote Bag</a>
-      </div>
-      <div class="product">
-        <img src="https://cdn.shopify.com/s/files/1/0680/4150/7113/files/bandana.png?v=1699488872" alt="Forest Bandana">
-        <a href="/product-page/forest-bandana">Forest Bandana</a>
-      </div>
-      <div class="product">
-        <img src="https://cdn.shopify.com/s/files/1/0680/4150/7113/files/shroom-shades.png?v=1699488879" alt="Shroom Shades">
-        <a href="/product-page/shroom-shades">Shroom Shades</a>
-      </div>
-    </div>
-  </section>
+      <div class="category-grid">
+        <!-- Shroom T-Shirt -->
+        <a class="product-card" href="#" target="_blank" rel="noopener">
+          <div class="product-media">
+            <!-- TODO: Replace placeholder image URL with your actual t-shirt image -->
+            <img src="https://via.placeholder.com/80x80.png?text=Tee" alt="Shroom T-Shirt" />
+          </div>
+          <div class="product-label">Shroom T-Shirt</div>
+          <div class="product-name">Shroom T-Shirt</div>
+        </a>
 
-  <section class="category">
-    <div class="icon-title">🎁 Mugs, Gifts & Decor</div>
-    <div class="products">
-      <div class="product">
-        <img src="https://cdn.shopify.com/s/files/1/0680/4150/7113/files/forager-mug.png?v=1699488887" alt="Forager Mug">
-        <a href="/product-page/forager-mug">Forager Mug</a>
+        <!-- Shroom Leggings -->
+        <a class="product-card" href="#" target="_blank" rel="noopener">
+          <div class="product-media">
+            <!-- TODO: Replace placeholder URL -->
+            <img src="https://via.placeholder.com/80x80.png?text=Leggings" alt="Shroom Leggings" />
+          </div>
+          <div class="product-label">Leggings</div>
+          <div class="product-name">Shroom Leggings</div>
+        </a>
+
+        <!-- Forager Slides -->
+        <a class="product-card" href="#" target="_blank" rel="noopener">
+          <div class="product-media">
+            <!-- TODO: Replace placeholder URL -->
+            <img src="https://via.placeholder.com/80x80.png?text=Slides" alt="Forager Slides" />
+          </div>
+          <div class="product-label">Slides</div>
+          <div class="product-name">Forager Slides</div>
+        </a>
       </div>
-      <div class="product">
-        <img src="https://cdn.shopify.com/s/files/1/0680/4150/7113/files/throw-blanket.png?v=1699488894" alt="Throw Blanket">
-        <a href="/product-page/throw-blanket">Throw Blanket</a>
+    </section>
+
+    <!-- Gear & Accessories -->
+    <section class="section-block" id="gear">
+      <div class="section-eyebrow">
+        <span class="icon">🎒</span>
+        <span>Gear &amp; Accessories</span>
       </div>
-      <div class="product">
-        <img src="https://cdn.shopify.com/s/files/1/0680/4150/7113/files/canvas-art.png?v=1699488901" alt="Forest Canvas Print">
-        <a href="/product-page/forest-canvas-print">Forest Canvas Print</a>
+      <h2 class="section-title">Field-Ready Extras</h2>
+
+      <div class="category-grid">
+        <!-- Mushroom Tote Bag -->
+        <a class="product-card" href="#" target="_blank" rel="noopener">
+          <div class="product-media">
+            <!-- TODO: Replace placeholder URL -->
+            <img src="https://via.placeholder.com/80x80.png?text=Tote" alt="Mushroom Tote Bag" />
+          </div>
+          <div class="product-label">Tote Bag</div>
+          <div class="product-name">Mushroom Tote Bag</div>
+        </a>
+
+        <!-- Forest Bandana -->
+        <a class="product-card" href="#" target="_blank" rel="noopener">
+          <div class="product-media">
+            <!-- TODO: Replace placeholder URL -->
+            <img src="https://via.placeholder.com/80x80.png?text=Bandana" alt="Forest Bandana" />
+          </div>
+          <div class="product-label">Bandana</div>
+          <div class="product-name">Forest Bandana</div>
+        </a>
+
+        <!-- Shroom Shades -->
+        <a class="product-card" href="#" target="_blank" rel="noopener">
+          <div class="product-media">
+            <!-- TODO: Replace placeholder URL -->
+            <img src="https://via.placeholder.com/80x80.png?text=Shades" alt="Shroom Shades" />
+          </div>
+          <div class="product-label">Sunglasses</div>
+          <div class="product-name">Shroom Shades</div>
+        </a>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- Mugs, Gifts & Décor -->
+    <section class="section-block" id="gifts">
+      <div class="section-eyebrow">
+        <span class="icon">🎁</span>
+        <span>Mugs, Gifts &amp; Décor</span>
+      </div>
+      <h2 class="section-title">Bring the Forest Home</h2>
+
+      <div class="category-grid">
+        <!-- Forager Mug -->
+        <a class="product-card" href="#" target="_blank" rel="noopener">
+          <div class="product-media">
+            <!-- TODO: Replace placeholder URL -->
+            <img src="https://via.placeholder.com/80x80.png?text=Mug" alt="Forager Mug" />
+          </div>
+          <div class="product-label">Mug</div>
+          <div class="product-name">Forager Mug</div>
+        </a>
+
+        <!-- Throw Blanket -->
+        <a class="product-card" href="#" target="_blank" rel="noopener">
+          <div class="product-media">
+            <!-- TODO: Replace placeholder URL -->
+            <img src="https://via.placeholder.com/80x80.png?text=Blanket" alt="Throw Blanket" />
+          </div>
+          <div class="product-label">Blanket</div>
+          <div class="product-name">Throw Blanket</div>
+        </a>
+
+        <!-- Forest Canvas Print -->
+        <a class="product-card" href="#" target="_blank" rel="noopener">
+          <div class="product-media">
+            <!-- TODO: Replace placeholder URL -->
+            <img src="https://via.placeholder.com/80x80.png?text=Canvas" alt="Forest Canvas Print" />
+          </div>
+          <div class="product-label">Canvas Art</div>
+          <div class="product-name">Forest Canvas Print</div>
+        </a>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
