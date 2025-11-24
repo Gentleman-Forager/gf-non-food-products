@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gentleman Forager · Gear Section</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --gf-bg: #f7f1e6;
+      --gf-text: #1f2723;
+      --gf-muted: #5c6a63;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 24px 16px 24px;
+      font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--gf-bg);
+      color: var(--gf-text);
+    }
+
+    .page-wrapper {
+      max-width: 1240px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .section-eyebrow {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-weight: 700;
+      margin-bottom: 2px;
+      color: var(--gf-muted);
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 800;
+      margin: 0 0 14px;
+    }
+
+    .category-image {
+      cursor: pointer;
+      display: inline-block;
+      transition: transform 0.16s ease, box-shadow 0.16s ease;
+      border-radius: 18px;
+    }
+
+    .category-image img {
+      max-width: 260px;
+      width: 100%;
+      border-radius: 18px;
+      display: block;
+      margin: 0 auto;
+      box-shadow: 0 0 0 rgba(0,0,0,0);
+      transition: transform 0.16s ease, box-shadow 0.16s ease;
+    }
+
+    .category-image:hover img {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 26px rgba(0, 0, 0, 0.10);
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page-wrapper">
+    <section id="gear">
+      <!-- Note: using "FIELD GEAR" to avoid repeating "Gear & Accessories"
+           which is already printed in the illustration itself -->
+      <div class="section-eyebrow">FIELD GEAR</div>
+      <h2 class="section-title">Field-Ready Extras</h2>
+
+      <div class="category-image">
+        <img
+          src="https://static.wixstatic.com/media/7549c3_deaae3ecc28e44678566132cb0803c6c~mv2.jpeg"
+          alt="Mushroom-themed tote, bandana and sunglasses"
+        />
+      </div>
+    </section>
+  </main>
+</body>
+</html>
