@@ -15,13 +15,11 @@
       --gf-muted: #5c6a63;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      padding: 24px 0 24px;
+      padding: 24px 0;
       font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: var(--gf-bg);
       color: var(--gf-text);
@@ -47,28 +45,6 @@
       font-weight: 800;
       margin: 0 0 18px;
     }
-
-    .category-image {
-      display: block;
-      max-width: 1000px;
-      margin: 0 auto;
-      cursor: pointer;
-      border-radius: 18px;
-      transition: transform 0.16s ease, box-shadow 0.16s ease;
-    }
-
-    .category-image img {
-      display: block;
-      margin: 0 auto;
-      border-radius: 18px;
-      width: 100%;
-      max-width: 720px;  /* BIGGER IMAGE */
-    }
-
-    .category-image:hover img {
-      transform: translateY(-3px);
-      box-shadow: 0 14px 26px rgba(0, 0, 0, 0.10);
-    }
   </style>
 </head>
 
@@ -78,12 +54,12 @@
       <div class="section-eyebrow">MUGS, GIFTS &amp; DÉCOR</div>
       <h2 class="section-title">Bring the Forest Home</h2>
 
-      <div class="category-image">
-        <img
-          src="https://static.wixstatic.com/media/7549c3_455cc8c0c9f24145b55eab2cf7bacb9c~mv2.jpg"
-          alt="Mushroom-themed mug, blanket and framed artwork"
-        />
-      </div>
+      <!-- INLINE STYLE CONTROLS SIZE -->
+      <img
+        src="https://static.wixstatic.com/media/7549c3_455cc8c0c9f24145b55eab2cf7bacb9c~mv2.jpg"
+        alt="Mushroom-themed mug, blanket and framed artwork"
+        style="display:block;margin:0 auto;width:720px;max-width:100%;border-radius:18px;"
+      />
     </section>
   </main>
 </body>
