@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Gentleman Forager · Non-Food Shop</title>
+  <title>Gentleman Forager · Apparel, Gear & Gifts</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Montserrat font -->
@@ -26,14 +26,14 @@
 
     body {
       margin: 0;
-      padding: 40px 16px 80px;
+      padding: 40px 16px 40px;
       font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: var(--gf-bg);
       color: var(--gf-text);
     }
 
     .page-wrapper {
-      max-width: 1240px;   /* slightly wider than before */
+      max-width: 1240px;
       margin: 0 auto;
     }
 
@@ -55,7 +55,7 @@
     }
 
     .section-block {
-      margin-bottom: 72px;
+      margin-bottom: 40px;      /* room below each header block for the Wix grid */
       text-align: center;
     }
 
@@ -64,18 +64,17 @@
       text-transform: uppercase;
       letter-spacing: 0.18em;
       font-weight: 700;
-      margin-bottom: 2px;       /* slightly tighter */
+      margin-bottom: 2px;
       color: var(--gf-muted);
     }
 
     .section-title {
       font-size: 20px;
       font-weight: 800;
-      margin: 0 0 14px;         /* tighter gap to category image */
+      margin: 0 0 14px;
     }
 
     .category-image {
-      margin-bottom: 18px;      /* slightly reduced */
       cursor: pointer;
       display: inline-block;
       transition: transform 0.16s ease, box-shadow 0.16s ease;
@@ -97,112 +96,18 @@
       box-shadow: 0 14px 26px rgba(0, 0, 0, 0.10);
     }
 
-    .category-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 24px;
-    }
-
-    .product-card {
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      flex: 1 1 260px;
-      min-width: 220px;
-      max-width: 340px;
-      padding: 18px 20px 20px;
-      background: var(--gf-card-bg);
-      border-radius: 18px;
-      border: 1px solid var(--gf-card-border);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
-      text-decoration: none;
-      color: var(--gf-text);
-      transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
-      text-align: left;
-    }
-
-    .product-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(14, 53, 34, 0.22);
-      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.08);
-    }
-
-    .product-media {
-      width: 80px;
-      height: 80px;
-      margin: 0 auto 12px;
-      border-radius: 999px;
-      background: #f3f3f3;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-
-    .product-media img {
-      max-width: 100%;
-      max-height: 100%;
-      display: block;
-    }
-
-    .product-label {
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      font-weight: 600;
-      opacity: 0.7;
-      margin-bottom: 4px;
-    }
-
-    .product-name {
-      font-size: 15px;
-      font-weight: 700;
-      line-height: 1.4;
-      margin-bottom: 10px;
-    }
-
-    .product-meta {
-      margin-top: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 13px;
-    }
-
-    .product-price {
-      font-weight: 700;
-    }
-
-    .product-cta {
-      font-weight: 600;
-      color: var(--gf-accent);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-size: 11px;
-    }
-
     @media (max-width: 900px) {
       .page-title {
         font-size: 28px;
-      }
-      .section-block {
-        margin-bottom: 56px;
       }
     }
 
     @media (max-width: 600px) {
       body {
-        padding: 32px 16px 56px;
+        padding: 32px 16px 32px;
       }
       .page-title {
         font-size: 24px;
-      }
-      .category-grid {
-        gap: 18px;
-      }
-      .product-card {
-        max-width: 100%;
       }
     }
   </style>
@@ -211,7 +116,7 @@
 <body>
   <main class="page-wrapper">
     <!-- Page hero -->
-    <h1 class="page-title">Non-Food Shop</h1>
+    <h1 class="page-title">Apparel, Gear &amp; Gifts</h1>
     <p class="page-subtitle">
       Apparel, gear, and gifts for mushroom lovers and forest wanderers.
     </p>
@@ -221,7 +126,7 @@
       <div class="section-eyebrow">APPAREL COLLECTION</div>
       <h2 class="section-title">Wear Your Wild Side</h2>
 
-      <!-- CATEGORY IMAGE -->
+      <!-- CATEGORY IMAGE (Apparel) -->
       <div class="category-image">
         <img
           src="https://static.wixstatic.com/media/7549c3_58794ea0d44945a1a7a71b31d99b47a8~mv2.jpeg"
@@ -229,46 +134,11 @@
         />
       </div>
 
-      <div class="category-grid">
-        <!-- Shroom T-Shirt -->
-        <a class="product-card" href="#" target="_blank" rel="noopener">
-          <div class="product-media">
-            <img src="https://via.placeholder.com/80x80.png?text=Tee" alt="Shroom T-Shirt" />
-          </div>
-          <div class="product-label">SHROOM T-SHIRT</div>
-          <div class="product-name">Classic Shroom T-Shirt</div>
-          <div class="product-meta">
-            <span class="product-price">$XX.XX</span>
-            <span class="product-cta">Shop now →</span>
-          </div>
-        </a>
-
-        <!-- Shroom Leggings -->
-        <a class="product-card" href="#" target="_blank" rel="noopener">
-          <div class="product-media">
-            <img src="https://via.placeholder.com/80x80.png?text=Leggings" alt="Shroom Leggings" />
-          </div>
-          <div class="product-label">LEGGINGS</div>
-          <div class="product-name">Shroom Leggings</div>
-          <div class="product-meta">
-            <span class="product-price">$XX.XX</span>
-            <span class="product-cta">Shop now →</span>
-          </div>
-        </a>
-
-        <!-- Forager Slides -->
-        <a class="product-card" href="#" target="_blank" rel="noopener">
-          <div class="product-media">
-            <img src="https://via.placeholder.com/80x80.png?text=Slides" alt="Forager Slides" />
-          </div>
-          <div class="product-label">SLIDES</div>
-          <div class="product-name">Forager Slides</div>
-          <div class="product-meta">
-            <span class="product-price">$XX.XX</span>
-            <span class="product-cta">Shop now →</span>
-          </div>
-        </a>
-      </div>
+      <!--
+        On the Wix page:
+        Place your APPAREL store grid directly BELOW this embed element.
+        The Wix grid will auto-size as you add/remove apparel products.
+      -->
     </section>
 
     <!-- GEAR & ACCESSORIES -->
@@ -276,7 +146,7 @@
       <div class="section-eyebrow">GEAR &amp; ACCESSORIES</div>
       <h2 class="section-title">Field-Ready Extras</h2>
 
-      <!-- CATEGORY IMAGE -->
+      <!-- CATEGORY IMAGE (Gear) -->
       <div class="category-image">
         <img
           src="https://static.wixstatic.com/media/7549c3_deaae3ecc28e44678566132cb0803c6c~mv2.jpeg"
@@ -284,46 +154,11 @@
         />
       </div>
 
-      <div class="category-grid">
-        <!-- Mushroom Tote Bag -->
-        <a class="product-card" href="#" target="_blank" rel="noopener">
-          <div class="product-media">
-            <img src="https://via.placeholder.com/80x80.png?text=Tote" alt="Mushroom Tote Bag" />
-          </div>
-          <div class="product-label">TOTE BAG</div>
-          <div class="product-name">Mushroom Tote Bag</div>
-          <div class="product-meta">
-            <span class="product-price">$XX.XX</span>
-            <span class="product-cta">Shop now →</span>
-          </div>
-        </a>
-
-        <!-- Forest Bandana -->
-        <a class="product-card" href="#" target="_blank" rel="noopener">
-          <div class="product-media">
-            <img src="https://via.placeholder.com/80x80.png?text=Bandana" alt="Forest Bandana" />
-          </div>
-          <div class="product-label">BANDANA</div>
-          <div class="product-name">Forest Bandana</div>
-          <div class="product-meta">
-            <span class="product-price">$XX.XX</span>
-            <span class="product-cta">Shop now →</span>
-          </div>
-        </a>
-
-        <!-- Shroom Shades -->
-        <a class="product-card" href="#" target="_blank" rel="noopener">
-          <div class="product-media">
-            <img src="https://via.placeholder.com/80x80.png?text=Shades" alt="Shroom Shades" />
-          </div>
-          <div class="product-label">SUNGLASSES</div>
-          <div class="product-name">Shroom Shades</div>
-          <div class="product-meta">
-            <span class="product-price">$XX.XX</span>
-            <span class="product-cta">Shop now →</span>
-          </div>
-        </a>
-      </div>
+      <!--
+        On the Wix page:
+        Place your GEAR & ACCESSORIES store grid below this section
+        (either as a separate grid or as part of a stacked layout).
+      -->
     </section>
 
     <!-- MUGS, GIFTS & DÉCOR -->
@@ -331,7 +166,7 @@
       <div class="section-eyebrow">MUGS, GIFTS &amp; DÉCOR</div>
       <h2 class="section-title">Bring the Forest Home</h2>
 
-      <!-- CATEGORY IMAGE -->
+      <!-- CATEGORY IMAGE (Mugs / Gifts / Decor) -->
       <div class="category-image">
         <img
           src="https://static.wixstatic.com/media/7549c3_455cc8c0c9f24145b55eab2cf7bacb9c~mv2.jpg"
@@ -339,46 +174,10 @@
         />
       </div>
 
-      <div class="category-grid">
-        <!-- Forager Mug -->
-        <a class="product-card" href="#" target="_blank" rel="noopener">
-          <div class="product-media">
-            <img src="https://via.placeholder.com/80x80.png?text=Mug" alt="Forager Mug" />
-          </div>
-          <div class="product-label">MUG</div>
-          <div class="product-name">Forager Mug</div>
-          <div class="product-meta">
-            <span class="product-price">$XX.XX</span>
-            <span class="product-cta">Shop now →</span>
-          </div>
-        </a>
-
-        <!-- Throw Blanket -->
-        <a class="product-card" href="#" target="_blank" rel="noopener">
-          <div class="product-media">
-            <img src="https://via.placeholder.com/80x80.png?text=Blanket" alt="Throw Blanket" />
-          </div>
-          <div class="product-label">BLANKET</div>
-          <div class="product-name">Throw Blanket</div>
-          <div class="product-meta">
-            <span class="product-price">$XX.XX</span>
-            <span class="product-cta">Shop now →</span>
-          </div>
-        </a>
-
-        <!-- Forest Canvas Print -->
-        <a class="product-card" href="#" target="_blank" rel="noopener">
-          <div class="product-media">
-            <img src="https://via.placeholder.com/80x80.png?text=Canvas" alt="Forest Canvas Print" />
-          </div>
-          <div class="product-label">CANVAS ART</div>
-          <div class="product-name">Forest Canvas Print</div>
-          <div class="product-meta">
-            <span class="product-price">$XX.XX</span>
-            <span class="product-cta">Shop now →</span>
-          </div>
-        </a>
-      </div>
+      <!--
+        On the Wix page:
+        Place your MUGS, GIFTS & DÉCOR store grid directly below this section.
+      -->
     </section>
   </main>
 </body>
