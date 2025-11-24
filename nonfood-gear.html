@@ -21,14 +21,14 @@
 
     body {
       margin: 0;
-      padding: 24px 16px 24px;
+      padding: 24px 0 24px;
       font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: var(--gf-bg);
       color: var(--gf-text);
     }
 
     .page-wrapper {
-      max-width: 1240px;
+      width: 100%;
       margin: 0 auto;
       text-align: center;
     }
@@ -38,32 +38,31 @@
       text-transform: uppercase;
       letter-spacing: 0.18em;
       font-weight: 700;
-      margin-bottom: 2px;
+      margin-bottom: 4px;
       color: var(--gf-muted);
     }
 
     .section-title {
-      font-size: 20px;
+      font-size: 26px;
       font-weight: 800;
-      margin: 0 0 14px;
+      margin: 0 0 18px;
+    }
+
+    .category-image {
+      display: block;
+      max-width: 1000px;
+      margin: 0 auto;
+      cursor: pointer;
+      border-radius: 18px;
+      transition: transform 0.16s ease, box-shadow 0.16s ease;
     }
 
     .category-image img {
-  display: block;
-  margin: 0 auto;
-  border-radius: 18px;
-  width: 100%;
-  max-width: 720px;   /* <<< make the image big */
-}
-
-    .category-image img {
-      max-width: 260px;
-      width: 100%;
-      border-radius: 18px;
       display: block;
       margin: 0 auto;
-      box-shadow: 0 0 0 rgba(0,0,0,0);
-      transition: transform 0.16s ease, box-shadow 0.16s ease;
+      border-radius: 18px;
+      width: 100%;
+      max-width: 720px;  /* BIGGER IMAGE */
     }
 
     .category-image:hover img {
@@ -76,8 +75,6 @@
 <body>
   <main class="page-wrapper">
     <section id="gear">
-      <!-- Note: using "FIELD GEAR" to avoid repeating "Gear & Accessories"
-           which is already printed in the illustration itself -->
       <div class="section-eyebrow">FIELD GEAR</div>
       <h2 class="section-title">Field-Ready Extras</h2>
 
