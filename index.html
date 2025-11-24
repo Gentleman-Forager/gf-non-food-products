@@ -88,11 +88,80 @@
       gap: 24px;
     }
 
+    /* CATEGORY HERO CARD (Apparel) */
+    .category-hero-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 32px;
+    }
+
+    .category-hero-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 520px;
+      width: 100%;
+      padding: 22px 24px 24px;
+      background: var(--gf-card-bg);
+      border-radius: 20px;
+      border: 1px solid var(--gf-card-border);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.06);
+      text-decoration: none;
+      color: var(--gf-text);
+      transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+    }
+
+    .category-hero-card:hover {
+      transform: translateY(-4px) scale(1.01);
+      border-color: rgba(14, 53, 34, 0.22);
+      box-shadow: 0 18px 36px rgba(0, 0, 0, 0.10);
+    }
+
+    .category-hero-image {
+      width: 220px;
+      height: 220px;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 18px;
+      background: #f3f1eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .category-hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .category-hero-heading {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .category-hero-text {
+      font-size: 14px;
+      color: var(--gf-muted);
+      margin-bottom: 10px;
+    }
+
+    .category-hero-cta {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--gf-accent);
+    }
+
+    /* PRODUCT CARDS */
     .product-card {
       display: flex;
       flex-direction: column;
       align-items: stretch;
-      flex: 1 1 260px;      /* grow to fill width, nice at full width */
+      flex: 1 1 260px;
       min-width: 220px;
       max-width: 340px;
       padding: 18px 20px 20px;
@@ -185,6 +254,15 @@
         font-size: 24px;
       }
 
+      .category-hero-card {
+        padding: 18px 18px 20px;
+      }
+
+      .category-hero-image {
+        width: 200px;
+        height: 200px;
+      }
+
       .category-grid {
         gap: 18px;
       }
@@ -198,10 +276,10 @@
 
 <body>
   <main class="page-wrapper">
-    <!-- Hero title (no green bar) -->
+    <!-- Page hero -->
     <h1 class="page-title">Non-Food Shop</h1>
     <p class="page-subtitle">
-      Apparel, gear, and gifts for modern-day foragers &amp; mushroom lovers.
+      Apparel, gear, and gifts for mushroom lovers and forest wanderers.
     </p>
 
     <!-- Apparel Collection -->
@@ -212,6 +290,22 @@
       </div>
       <h2 class="section-title">Wear Your Wild Side</h2>
 
+      <!-- CATEGORY HERO CARD -->
+      <div class="category-hero-wrapper">
+        <a class="category-hero-card" href="#" target="_blank" rel="noopener">
+          <div class="category-hero-image">
+            <img src="https://static.wixstatic.com/media/7549c3_58fb33c2ffc0440aaeacadc4711adb7a~mv2.png"
+                 alt="Mushroom-themed apparel collection" />
+          </div>
+          <div class="category-hero-heading">Apparel Collection</div>
+          <div class="category-hero-text">
+            Everyday apparel with a wild mushroom twist.
+          </div>
+          <div class="category-hero-cta">Explore the collection →</div>
+        </a>
+      </div>
+
+      <!-- INDIVIDUAL APPAREL PRODUCTS -->
       <div class="category-grid">
         <!-- Shroom T-Shirt -->
         <a class="product-card" href="#" target="_blank" rel="noopener">
@@ -219,7 +313,7 @@
             <!-- TODO: replace with real tee image -->
             <img src="https://via.placeholder.com/80x80.png?text=Tee" alt="Shroom T-Shirt" />
           </div>
-          <div class="product-label">Shroom T-Shirt</div>
+          <div class="product-label">Shirt</div>
           <div class="product-name">Classic Shroom T-Shirt</div>
           <div class="product-meta">
             <span class="product-price">$XX.XX</span>
@@ -230,7 +324,6 @@
         <!-- Shroom Leggings -->
         <a class="product-card" href="#" target="_blank" rel="noopener">
           <div class="product-media">
-            <!-- TODO: replace -->
             <img src="https://via.placeholder.com/80x80.png?text=Leggings" alt="Shroom Leggings" />
           </div>
           <div class="product-label">Leggings</div>
@@ -244,7 +337,6 @@
         <!-- Forager Slides -->
         <a class="product-card" href="#" target="_blank" rel="noopener">
           <div class="product-media">
-            <!-- TODO: replace -->
             <img src="https://via.placeholder.com/80x80.png?text=Slides" alt="Forager Slides" />
           </div>
           <div class="product-label">Slides</div>
@@ -269,7 +361,6 @@
         <!-- Mushroom Tote Bag -->
         <a class="product-card" href="#" target="_blank" rel="noopener">
           <div class="product-media">
-            <!-- TODO: replace -->
             <img src="https://via.placeholder.com/80x80.png?text=Tote" alt="Mushroom Tote Bag" />
           </div>
           <div class="product-label">Tote Bag</div>
@@ -283,7 +374,6 @@
         <!-- Forest Bandana -->
         <a class="product-card" href="#" target="_blank" rel="noopener">
           <div class="product-media">
-            <!-- TODO: replace -->
             <img src="https://via.placeholder.com/80x80.png?text=Bandana" alt="Forest Bandana" />
           </div>
           <div class="product-label">Bandana</div>
@@ -297,7 +387,6 @@
         <!-- Shroom Shades -->
         <a class="product-card" href="#" target="_blank" rel="noopener">
           <div class="product-media">
-            <!-- TODO: replace -->
             <img src="https://via.placeholder.com/80x80.png?text=Shades" alt="Shroom Shades" />
           </div>
           <div class="product-label">Sunglasses</div>
@@ -322,7 +411,6 @@
         <!-- Forager Mug -->
         <a class="product-card" href="#" target="_blank" rel="noopener">
           <div class="product-media">
-            <!-- TODO: replace -->
             <img src="https://via.placeholder.com/80x80.png?text=Mug" alt="Forager Mug" />
           </div>
           <div class="product-label">Mug</div>
@@ -336,7 +424,6 @@
         <!-- Throw Blanket -->
         <a class="product-card" href="#" target="_blank" rel="noopener">
           <div class="product-media">
-            <!-- TODO: replace -->
             <img src="https://via.placeholder.com/80x80.png?text=Blanket" alt="Throw Blanket" />
           </div>
           <div class="product-label">Blanket</div>
@@ -350,7 +437,6 @@
         <!-- Forest Canvas Print -->
         <a class="product-card" href="#" target="_blank" rel="noopener">
           <div class="product-media">
-            <!-- TODO: replace -->
             <img src="https://via.placeholder.com/80x80.png?text=Canvas" alt="Forest Canvas Print" />
           </div>
           <div class="product-label">Canvas Art</div>
