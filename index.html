@@ -2,20 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Gentleman Forager · Apparel, Gear & Gifts</title>
+  <title>Gentleman Forager · Apparel Section</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Montserrat font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --gf-bg: #f7f1e6;         /* light warm beige */
-      --gf-text: #1f2723;       /* deep forest text */
+      --gf-bg: #f7f1e6;
+      --gf-text: #1f2723;
       --gf-muted: #5c6a63;
-      --gf-accent: #c86b1b;     /* warm accent */
     }
 
     * {
@@ -24,36 +21,16 @@
 
     body {
       margin: 0;
-      padding: 40px 16px 40px;
+      padding: 24px 16px 24px;
       font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--gf-bg);
+      background: --gf-bg;
+      background: #f7f1e6;
       color: var(--gf-text);
     }
 
     .page-wrapper {
       max-width: 1240px;
       margin: 0 auto;
-    }
-
-    .page-title {
-      text-align: center;
-      font-size: 32px;
-      font-weight: 800;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      margin: 0 0 6px;
-    }
-
-    .page-subtitle {
-      text-align: center;
-      font-size: 15px;
-      color: var(--gf-muted);
-      max-width: 520px;
-      margin: 0 auto 36px;
-    }
-
-    .section-block {
-      margin-bottom: 24px;
       text-align: center;
     }
 
@@ -93,49 +70,21 @@
       transform: translateY(-3px);
       box-shadow: 0 14px 26px rgba(0, 0, 0, 0.10);
     }
-
-    @media (max-width: 900px) {
-      .page-title {
-        font-size: 28px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      body {
-        padding: 32px 16px 32px;
-      }
-      .page-title {
-        font-size: 24px;
-      }
-    }
   </style>
 </head>
 
 <body>
   <main class="page-wrapper">
-    <!-- Page hero -->
-    <h1 class="page-title">Apparel Gear &amp; Gifts</h1>
-    <p class="page-subtitle">
-      For mushroom lovers and forest wanderers.
-    </p>
-
-    <!-- APPAREL COLLECTION -->
-    <section class="section-block" id="apparel">
+    <section id="apparel">
       <div class="section-eyebrow">APPAREL COLLECTION</div>
       <h2 class="section-title">Wear Your Wild Side</h2>
 
-      <!-- CATEGORY IMAGE (Apparel) -->
       <div class="category-image">
         <img
           src="https://static.wixstatic.com/media/7549c3_58794ea0d44945a1a7a71b31d99b47a8~mv2.jpeg"
           alt="Mushroom-themed apparel collection"
         />
       </div>
-
-      <!--
-        In Wix:
-        Place your APPAREL store grid directly BELOW this embed.
-      -->
     </section>
   </main>
 </body>
